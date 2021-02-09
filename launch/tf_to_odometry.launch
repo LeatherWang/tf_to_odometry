@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="parent_frame"    default="" />
+    <arg name="child_frame"     default="" />
+    <arg name="loop_rate"       default="50" />
+
+    <node name="tf_to_odometry" pkg="tf_to_odometry" type="tf_to_odometry" output="screen">
+        <param name="parent_frame"      type="str"      value="$(arg parent_frame)" />
+        <param name="child_frame"       type="str"      value="$(arg child_frame)" />
+        <param name="loop_rate"         type="double"   value="$(arg loop_rate)" />
+    </node>
+
+</launch>

@@ -16,3 +16,7 @@ add_definitions("-std=c++11 -Werror")
 add_executable(tf_to_odometry src/tf_to_odometry.cpp)
 target_link_libraries(tf_to_odometry ${catkin_LIBRARIES})
 add_dependencies(tf_to_odometry ${catkin_EXPORTED_TARGETS})
+
+add_executable(transform_stamped_to_odometry src/transform_stamped_to_odometry.cpp)
+target_link_libraries(transform_stamped_to_odometry ${catkin_LIBRARIES})
+add_dependencies(transform_stamped_to_odometry ${catkin_EXPORTED_TARGETS})
